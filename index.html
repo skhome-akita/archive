@@ -1,55 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title></title>
-  <meta name="robots" content="index,follow" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Archive</title>
   <style>
-    /* 全画面フルカバーのシンプルテンプレート */
-    html,body { height: 100%; margin: 0; }
     body {
-      background: #000; /* 画像読み込み前の背景色（黒） */
-      font-family: system-ui, -apple-system, "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000; /* 背景色は黒（必要なら #fff に変更） */
     }
-
-    /* 背景画像を全画面で表示（cover） */
-    .hero {
-      position: fixed;
-      inset: 0;
-      background-image: url('001.jpg');
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed; /* デスクトップでは固定表示 */
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
+    img {
+      display: block;
+      width: 100%;   /* 横幅いっぱいに表示 */
+      height: auto;  /* 縦横比を崩さず縦は自動調整 */
     }
-
-    /* モバイルで fixed にすると動作が重くなることがあるので解除 */
-    @media (max-width: 768px) {
-      .hero { background-attachment: scroll; }
-    }
-
-    /* 余計な選択やズームを防ぐ（任意） */
-    img{max-width:100%;height:auto;display:block}
-    /* ページ中にテキストや要素を置かないため、最低限アクセシビリティの配慮で空のalt付きimgをプリロードに使う */
-    .preload { display:none; width:0; height:0; overflow:hidden; }
   </style>
 </head>
 <body>
-  <!-- 背景画像（CSSで表示） -->
-  <div class="hero" role="img" aria-label="記録画像"></div>
-
-  <!-- ブラウザや環境によってはCSS背景が表示されないことがあるためのプリロード（表示はしない） -->
-  <img class="preload" src="001.jpg" alt="">
-
-  <!--
-    使用上の注意：
-    - index.html と 001.jpg を同じフォルダに置いてください。
-    - 画像ファイル名が違う場合は CSS の background-image のファイル名を変更してください。
-    - ファイルサイズが大きいと読み込みに時間がかかるため、WebP または最適化された JPG の使用を推奨します。
-  -->
+  <img src="001.jpg" alt="Company Image">
 </body>
 </html>
